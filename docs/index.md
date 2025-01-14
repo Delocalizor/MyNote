@@ -1,17 +1,5 @@
-# Welcome to MkDocs
+# Welcome to My Notebook
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## Self-Introduction
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+23级ZJU CSer，从别人的笔记网站中受益良多，所以也想自己创建一个个人笔记的github page。技术不精，还请见谅。
