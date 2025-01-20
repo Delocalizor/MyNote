@@ -4,13 +4,12 @@ theme:
   name: 'material'
 
 nav:
-    - Home: index.md
-    - Second: 
+    -Home: "index.md"
+    -Second: 
          -col1: "test.md"
          -col2: "test.md"
-         -col3: 
     -CS course note:
          -数据库系统: "CS course note/database system/index.md"
          -Stanford CS231n CNN:
-           -Lecture 1 Introduction: "CS course note\CS231n\Lecture 1 Introduction\index.md"
-           -Lecture 2 Image Classification Pipeline: "CS course note\CS231n\Lecture 2 Image Classification pipeline\index.md"
+           -Lecture 1 Introduction: "CS course note/CS231n/Lecture 1 Introduction/index.md"
+           -Lecture 2 Image Classification Pipeline: "CS course note/CS231n/Lecture 2 Image Classification pipeline/index.md"
