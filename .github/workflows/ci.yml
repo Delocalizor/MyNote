@@ -1,35 +1,24 @@
-name: GitHub Pages
-
+name: ci 
 on:
   push:
     branches:
       - master
-
 permissions:
   contents: write
-
-env:
-  PYTHON_VERSION: 3.x
-
 jobs:
-  docs:
-    name: Deploy Documentation to GitHub Pages
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-latest 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          cache: pip
-      - name: Cache
-        uses: actions/cache@v4
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v3
         with:
-          key: ${{ github.ref }}
+          key: mkdocs-material-${{ env.cache_id }}
           path: .cache
-      - name: Install Dependencies
-        run: pip install --requirement=requirements.txt
-      - name: Deploy Documentation to GitHub Pages
-        run: mkdocs gh-deploy --force --no-history
-
+          restore-keys: |
+            mkdocs-material-
+      - run: pip install mkdocs-material 
+      - run: mkdocs gh-deploy --force

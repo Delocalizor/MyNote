@@ -1,4 +1,0 @@
-lxml
-mkdocs-awesome-pages-plugin
-mkdocs-glightbox
-mkdocs-material
